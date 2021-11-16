@@ -3,7 +3,6 @@
 Messy hair don't care
 
 (And by hair I mean code)
-```
 /*
 
 Messy hair don't care
