@@ -28,16 +28,20 @@ void do_thing() {
   }
   
   
-  //background (0);
-  
-  strokeWeight(4);
-  stroke(255);
+  background (0);
   
   int drawn = 0;
   
   for (int i = 0; i < x.length; i++) {
     if (x[i] + y[i] != 0) {
+      strokeWeight(1);
+      stroke(255, 0, 0);
+      ellipse(x[i], y[i], space / 2, space / 2);
+      
+      strokeWeight(4);
+      stroke(255);
       point(x[i], y[i]);
+      
       drawn++;
     }
   }
