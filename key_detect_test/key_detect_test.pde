@@ -57,9 +57,9 @@ void draw() {
   if (keys.get("q") != null && keys.get("q")) {
     rect(100, 100, keyWidth, keyWidth);
   }
-  //if (keys.get("w") != null && keys.get("w")) {
-  //  rect(150, 100, keyWidth, keyWidth);
-  //}
+  if (keys.get("w") != null && keys.get("w")) {
+    rect(150, 100, keyWidth, keyWidth);
+  }
   if (keys.get("a") != null && keys.get("a")) {
     rect(100, 150, keyWidth, keyWidth);
   }
@@ -78,9 +78,9 @@ void draw() {
   if (keys.get("37") != null && keys.get("37")) {
     rect(300, 150, keyWidth, keyWidth);
   }
-  //if (keys.get("40") != null && keys.get("40")) {
-  //  rect(350, 150, keyWidth, keyWidth);
-  //}
+  if (keys.get("40") != null && keys.get("40")) {
+    rect(350, 150, keyWidth, keyWidth);
+  }
   if (keys.get("39") != null && keys.get("39")) {
     rect(400, 150, keyWidth, keyWidth);
   }
