@@ -22,7 +22,7 @@ void setup() {
 
 
 void keyPressed() {
-  String key2 = String.valueOf(key);
+  String key2 = String.valueOf(key).toLowerCase();
   
   if (keys.get(key2) == null) {
     // Nothing
@@ -37,7 +37,7 @@ void keyPressed() {
 
 
 void keyReleased() {
-  keys.put(String.valueOf(key), Boolean.FALSE);
+  keys.put(String.valueOf(key).toLowerCase(), Boolean.FALSE);
   keys.put(String.valueOf(keyCode), Boolean.FALSE);
 }
 
