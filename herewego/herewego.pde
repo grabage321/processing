@@ -2,17 +2,17 @@ void setup() {
   size(960, 720);
   frameRate(360);
   
-  keyInit();
+  //keyInit();
   
   displayBoard[0][9] = displayColor.I;
   displayBoard[1][9] = displayColor.I;
   displayBoard[2][9] = displayColor.I;
   displayBoard[3][9] = displayColor.I;
   
-  displayBoard[0][0] = displayColor.T;
-  displayBoard[0][1] = displayColor.T;
-  displayBoard[0][2] = displayColor.T;
-  displayBoard[1][1] = displayColor.T;
+  //displayBoard[0][0] = displayColor.T;
+  //displayBoard[0][1] = displayColor.T;
+  //displayBoard[0][2] = displayColor.T;
+  //displayBoard[1][1] = displayColor.T;
   
   //displayBoard[0][3] = displayColor.GS;
   //displayBoard[0][4] = displayColor.GS;

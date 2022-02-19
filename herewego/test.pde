@@ -33,15 +33,15 @@ public class piece {
   
   
   public void displayPiece() {
-    for (int i : tiles) {
-      displayBoard[tiles[i].getRow()][tiles[i].getCol()] = this.dc;
+    for (tile i : tiles) {
+      displayBoard[i.getRow()][i.getCol()] = this.dc;
     }
   }
   
   public void moveDown() {
     boolean canMove = true;
-    for (int i : tiles) {
-      canMove &= board[tiles[i].getRow() - 1][tiles[i].getCol()] == 1;
+    for (tile i : tiles) {
+      canMove &= board[i.getRow() - 1][i.getCol()] == 1;
     }
   }
 }

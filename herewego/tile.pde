@@ -20,13 +20,13 @@ public class tile {
   }
   
   
-  public void setRow(int row) {
-    this.row = row;
-  }
+  //public void setRow(int row) {
+  //  this.row = row;
+  //}
   
-  public void setCol(int col) {
-    this.col = col;
-  }
+  //public void setCol(int col) {
+  //  this.col = col;
+  //}
   
   
   

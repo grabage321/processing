@@ -1,21 +1,19 @@
 import java.util.Map;
 
-public static HashMap<String, Boolean> keys = new HashMap<String, Boolean>();
+public static HashMap<String, Boolean> keys = new HashMap<>();
+public static HashMap<String, Integer> keyDuration = new HashMap<>();
 
 
 
 void keyPressed() {
+  String keyString = String.valueOf(key).toLowerCase();
   
-  String key2 = String.valueOf(key).toLowerCase();
-  
-  if (keys.get(key2) == null) {
-    // Nothing
-  } else if (keys.get(key2)) {
-    // Also nothing
+  if (keys.get(keyString) != null && keys.get(keyString)) {
+    
   } else if (key == CODED) {
     keys.put(String.valueOf(keyCode), Boolean.TRUE);
   } else {
-    keys.put(key2, Boolean.TRUE);
+    keys.put(keyString, Boolean.TRUE);
   } 
 }
 
@@ -26,18 +24,18 @@ void keyReleased() {
 
 
 
-void keyInit() {
-  keys.put("q", Boolean.FALSE);
-  keys.put("w", Boolean.FALSE);
-  keys.put("a", Boolean.FALSE);
-  keys.put("s", Boolean.FALSE);
-  keys.put("d", Boolean.FALSE);
-  keys.put(" ", Boolean.FALSE);
-  keys.put("37", Boolean.FALSE);
-  keys.put("38", Boolean.FALSE);
-  keys.put("39", Boolean.FALSE);
-  keys.put("40", Boolean.FALSE);
-}
+//void keyInit() {
+//  keys.put("q", Boolean.FALSE);
+//  keys.put("w", Boolean.FALSE);
+//  keys.put("a", Boolean.FALSE);
+//  keys.put("s", Boolean.FALSE);
+//  keys.put("d", Boolean.FALSE);
+//  keys.put(" ", Boolean.FALSE);
+//  keys.put("37", Boolean.FALSE);
+//  keys.put("38", Boolean.FALSE);
+//  keys.put("39", Boolean.FALSE);
+//  keys.put("40", Boolean.FALSE);
+//}
 
 
 
