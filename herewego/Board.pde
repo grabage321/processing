@@ -6,6 +6,14 @@ displayColor[][] board = new displayColor[boardHeight][boardWidth];
 
 
 void drawBoard() {
+  for (int i = 0; i <= boardHeight / 2 + 1; i++) {
+    for (int j = 0; j <= boardWidth; j++) {
+      strokeWeight(2);
+      stroke(128);
+      point((330 + j * 30) - 15, (670 - i * 30) + 15);
+    }
+  }
+  
   for (int i = 0; i < boardHeight / 2 + 1; i++) {
     for (int j = 0; j < boardWidth; j++) {
       rectMode(CENTER);
@@ -18,9 +26,9 @@ void drawBoard() {
       }
       
       // Draw points at center of all cells
-      strokeWeight(5);
-      stroke(255);
-      point(330 + j * 30, 670 - i * 30);
+      //strokeWeight(5);
+      //stroke(255);
+      //point(330 + j * 30, 670 - i * 30);
     }
   }  
 }
