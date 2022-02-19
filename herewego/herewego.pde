@@ -1,27 +1,30 @@
 void setup() {
   size(960, 720);
+  frameRate(360);
   
   keyInit();
   
-  board[0][9] = displayColor.I;
-  board[1][9] = displayColor.I;
-  board[2][9] = displayColor.I;
-  board[3][9] = displayColor.I;
+  displayBoard[0][9] = displayColor.I;
+  displayBoard[1][9] = displayColor.I;
+  displayBoard[2][9] = displayColor.I;
+  displayBoard[3][9] = displayColor.I;
   
-  board[0][0] = displayColor.T;
-  board[0][1] = displayColor.T;
-  board[0][2] = displayColor.T;
-  board[1][1] = displayColor.T;
+  displayBoard[0][0] = displayColor.T;
+  displayBoard[0][1] = displayColor.T;
+  displayBoard[0][2] = displayColor.T;
+  displayBoard[1][1] = displayColor.T;
   
-  board[0][3] = displayColor.GS;
-  board[1][2] = displayColor.GS;
-  board[1][3] = displayColor.GS;
-  board[2][2] = displayColor.GS;
+  //displayBoard[0][3] = displayColor.GS;
+  //displayBoard[0][4] = displayColor.GS;
+  //displayBoard[1][4] = displayColor.GS;
+  //displayBoard[1][5] = displayColor.GS;
   
-  board[18][3] = displayColor.S;
-  board[19][2] = displayColor.S;
-  board[19][3] = displayColor.S;
-  board[20][2] = displayColor.S;
+  //displayBoard[19][3] = displayColor.S;
+  //displayBoard[19][4] = displayColor.S;
+  //displayBoard[20][4] = displayColor.S;
+  //displayBoard[20][5] = displayColor.S;
+  
+  piece t = new piece('T');
 }
 
 
