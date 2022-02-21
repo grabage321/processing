@@ -6,20 +6,33 @@ public static HashMap<String, Integer> keyDuration = new HashMap<>();
 
 
 void keyPressed() {
-  String keyString = String.valueOf(key).toLowerCase();
+  String keyString;
+  
+  if (key == CODED)
+    keyString = String.valueOf(keyCode);
+  else
+    keyString = String.valueOf(key).toLowerCase();
+  
   
   if (keys.get(keyString) != null && keys.get(keyString)) {
-    
-  } else if (key == CODED) {
-    keys.put(String.valueOf(keyCode), Boolean.TRUE);
+    //nothing
   } else {
+    keyDuration.put(keyString, 0);
     keys.put(keyString, Boolean.TRUE);
-  } 
+  }
 }
 
 void keyReleased() {
-  keys.put(String.valueOf(key).toLowerCase(), Boolean.FALSE);
-  keys.put(String.valueOf(keyCode), Boolean.FALSE);
+  String keyString;
+  
+  if (key == CODED)
+    keyString = String.valueOf(keyCode).toLowerCase();
+  else
+    keyString = String.valueOf(key).toLowerCase();
+  
+  
+  keys.put(keyString, Boolean.FALSE);
+  keyDuration.put(keyString, 0);
 }
 
 
@@ -36,6 +49,21 @@ void keyReleased() {
 //  keys.put("39", Boolean.FALSE);
 //  keys.put("40", Boolean.FALSE);
 //}
+
+
+
+void keyDurationUpdate() {
+  String keyString;
+  
+  for (Map.Entry i : keys.entrySet()) {
+    keyString = i.getKey().toString();
+    
+    if (keys.get(keyString) != null && keys.get(keyString))
+      keyDuration.put(keyString, keyDuration.get(keyString) + 1);
+    if (keys.get(keyString) != null && !keys.get(keyString) && keyDuration.get(keyString) > - (fps / 2))
+      keyDuration.put(keyString, keyDuration.get(keyString) - 1);
+  }
+}
 
 
 

@@ -2,7 +2,7 @@ int boardHeight = 40;
 int boardWidth = 10;
 int displayBoardHeight = 22;
 
-public displayColor[][] displayBoard = new displayColor[displayBoardHeight][boardWidth];
+public displayColor[][] displayBoard = new displayColor[boardHeight][boardWidth];
 public byte[][] board = new byte[boardHeight][boardWidth];
 
 
